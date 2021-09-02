@@ -24,6 +24,11 @@ int main(){
     enrutadores.agregarEnrutador("D","A",2);
     enrutadores.modificacion2("D");
 
+    enrutadores.eliminarEnrutador("B");
+
+    enrutadores.modificarCosto("D","A",4);
+    enrutadores.modificacion2("D");
+
     cout<<"probando"<<endl;
     return 0;
 }

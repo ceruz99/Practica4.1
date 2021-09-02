@@ -26,10 +26,6 @@ void red::modificaciones(string nuevo, string listo, int costo, int opcion){
                 break;
             }
             case 2:{
-                temporal.erase(nuevo);
-                break;
-            }
-            case 3:{
                 temporal[nuevo]=costo;
                 break;
             }
@@ -43,6 +39,23 @@ void red::modificaciones(string nuevo, string listo, int costo, int opcion){
 void red::agregarEnrutador(string _nuevo, string _listo, int _costo){
     singleMap[_listo]=_costo;
     modificaciones(_nuevo,_listo,_costo,1);
+}
+
+void red::eliminarEnrutador(string _eliminar){
+    conexiones.erase(_eliminar);
+    map<string,int> temporal;
+    map<string,int>::iterator itTemp;
+    for(itOut=conexiones.begin();itOut!=conexiones.end();itOut++){
+        temporal=itOut->second;
+        temporal.erase(_eliminar);
+        conexiones[itOut->first]=temporal;
+    }
+}
+
+void red::modificarCosto(string _nuevo, string _listo, int _costo){
+    singleMap=conexiones[_nuevo];
+    singleMap[_listo]=_costo;
+    modificaciones(_nuevo,_listo,_costo,2);
 }
 
 

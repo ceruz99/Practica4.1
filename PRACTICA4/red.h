@@ -19,8 +19,7 @@ private:
     /*Funcion que agrega o elimina conexiones de los enrutadores del mapa conexiones y también
     modifica costos de conexion.
     opcion 1: Agregar.
-    opcion 2: eliminar.
-    opcion 3: modificar costo.
+    opcion 2: modificar costo.
     */
 
 public:
@@ -33,6 +32,12 @@ public:
 
     void agregarEnrutador(string _nuevo, string _listo, int _costo);
     /*Guarda un nuevo enrutador y sus conexiones*/
+
+    void eliminarEnrutador(string _eliminar);
+    /*Elimina el enrutador indicado de la red*/
+
+    void modificarCosto(string _nuevo, string _listo, int _costo);
+    /*Modifica el costo de la conexion indicada*/
 };
 
 #endif // RED_H
