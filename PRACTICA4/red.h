@@ -1,10 +1,13 @@
 #ifndef RED_H
 #define RED_H
 #include<string.h>
-#include <iostream>
+#include<iostream>
 #include<map>
 #include<vector>
 #include<queue>
+#include<fstream>
+#include <cstdlib>
+
 using namespace std;
 
 class red
@@ -42,6 +45,7 @@ public:
     void calcularRuta(string origen, string destino);
     /*Calcula el camino más corto y menor costo de un nodo a otro, también muestra que camino
     seguir y dicho costo*/
+
 };
 
 #endif // RED_H
