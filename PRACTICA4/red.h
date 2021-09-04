@@ -4,7 +4,7 @@
 #include <iostream>
 #include<map>
 #include<vector>
-
+#include<queue>
 using namespace std;
 
 class red
@@ -38,6 +38,10 @@ public:
 
     void modificarCosto(string _nuevo, string _listo, int _costo);
     /*Modifica el costo de la conexion indicada*/
+
+    void calcularRuta(string origen, string destino);
+    /*Calcula el camino más corto y menor costo de un nodo a otro, también muestra que camino
+    seguir y dicho costo*/
 };
 
 #endif // RED_H
